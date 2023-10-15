@@ -13,7 +13,7 @@ class Country extends Model
     protected $fillable = ['name'];
 
     public function cities(): HasMany{
-        return $this->hasMany(Cİty::class);
+        return $this->hasMany(City::class);
     }
 
     public function events(): HasMany{
