@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\EventShowController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WelcomeController;
 use App\Models\Country;
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',WelcomeController::class)->name('welcome');
+Route::get('/e/{id}',EventShowController::class)->name('eventShow');
 
 
 Route::get('/dashboard', function () {
