@@ -102,6 +102,7 @@
             <p class="mb-6 mt-4 text-neutral-500 dark:text-neutral-300">
                 {{ $event->description }}
             </p>
+            @auth
             <div class="flex justify-end">
                 <div class="flex flex-col">
                     <div class="mb-4 flex items-center text-sm font-medium">
@@ -120,6 +121,7 @@
                     </div>
                 </div>
             </div>
+            @endauth
             @auth
                 <div
                     class="container d-flex justify-content-center align-items-center w-50 mt-6 bg-slate-200 p-4 rounded-md">

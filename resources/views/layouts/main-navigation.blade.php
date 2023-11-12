@@ -22,6 +22,19 @@
                         {{ __('Gallery') }}
                     </x-nav-link>
                 </div>
+
+                 <!-- Navigation Links -->
+                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                     @auth
+                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
+                    @else
+                    <x-nav-link :href="route('login')" :active="request()->routeIs('login')">Login</x-nav-link>
+                    <x-nav-link :href="route('register')" :active="request()->routeIs('register')">Register</x-nav-link>
+                     @endauth
+                    
+                </div>
             </div>
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
