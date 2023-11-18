@@ -30,7 +30,7 @@
                             })
                         },
                         onHandleSavedEvent() {
-                            axios.post(`/events-saved/{{ $event->id }}`).then(res => {
+                            axios.post(`/events-save/{{ $event->id }}`).then(res => {
                                 this.savedEvent = res.data
                             })
                         },
