@@ -10,6 +10,7 @@ class DeleteCommentController extends Controller
 {
     public function __invoke($id, Comment $comment)
     {
+        $this->authorize('delete',$comment);
         $comment->delete();
 
         return back();

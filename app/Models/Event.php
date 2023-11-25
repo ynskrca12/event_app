@@ -28,6 +28,8 @@ class Event extends Model
 
     protected $casts = [
         'start_date' => 'date:m/d/Y',
+        'end_date' => 'date:m/d/Y',
+
     ];
 
     public function user(): BelongsTo{
