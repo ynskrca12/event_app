@@ -3,7 +3,9 @@
 use App\Http\Controllers\AttendingSystemController;
 use App\Http\Controllers\DeleteCommentController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\GalleryIndexController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\EventIndexController;
 use App\Http\Controllers\EventShowController;
 use App\Http\Controllers\LikeSystemController;
 use App\Http\Controllers\ProfileController;
@@ -25,7 +27,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',WelcomeController::class)->name('welcome');
+Route::get('/e',EventIndexController::class)->name('eventIndex');
 Route::get('/e/{id}',EventShowController::class)->name('eventShow');
+Route::get('/gallery',GalleryIndexController::class)->name('galleryIndex');
 
 
 Route::get('/dashboard', function () {
